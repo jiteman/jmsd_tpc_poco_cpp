@@ -65,7 +65,7 @@ endif()
 JMSD_REMOVE_FILES_FROM_THE_LIST( header_and_source_files PLATFORM_SPECIC_FILES_TO_REMOVE_HEADER_AND_SOURCE )
 
 if( WIN32 )
-	JMSD_MICROSOFT_MESSAGE_COMPILER( header_and_source_files ${JMSD_POCO_FOUNDATION_SOURCE_PATH}/src/pocomsg.mc )
+	JMSD_MICROSOFT_MESSAGE_COMPILER( header_and_source_files ${JMSD_THIS_PROJECT_SOURCE_ROOT}/src/pocomsg.mc )
 endif()
 
 add_library( ${PROJECT_NAME} SHARED ${header_and_source_files} )
