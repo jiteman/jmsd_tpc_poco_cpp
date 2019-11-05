@@ -4,8 +4,6 @@ if ( WIN32 )
 	set( ${PROJECT_NAME}_CXX_FLAGS ${CMAKE_CXX_FLAGS} )
 
 	## list( APPEND ${PROJECT_NAME}_CXX_FLAGS "/wd" ) #
-	## list( APPEND ${PROJECT_NAME}_CXX_FLAGS "/wd
-	## " ) #
 	list( APPEND ${PROJECT_NAME}_CXX_FLAGS "/wd4100" ) # '': unreferenced formal parameter
 	list( APPEND ${PROJECT_NAME}_CXX_FLAGS "/wd4127" ) # conditional expression is constant
 	list( APPEND ${PROJECT_NAME}_CXX_FLAGS "/wd4189" ) # '': local variable is initialized but not referenced
