@@ -13,6 +13,7 @@ set( JMSD_COMPONENT_CMAKE_SETTINGS_PATH ${PROJECT_SOURCE_DIR}/_tpc_cmake_setting
 add_subdirectory( tpc_poco_foundation )
 add_subdirectory( tpc_poco_json )
 add_subdirectory( tpc_poco_xml )
+add_subdirectory( tpc_poco_util )
 #add_subdirectory( tpc_derived_lib )
 #add_subdirectory( tpc_executabe )
 
