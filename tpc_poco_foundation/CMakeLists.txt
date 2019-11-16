@@ -10,6 +10,8 @@ include( ${JMSD_COMPONENT_CMAKE_SETTINGS_PATH}/tpc-poco-foundation-set-compiler-
 include( ${JMSD_COMPONENT_CMAKE_SETTINGS_PATH}/macroses/tpc-poco-functions-and-macroses.cmake )
 set( JMSD_THIS_PROJECT_SOURCE_ROOT ${JMSD_COMPONENT_SOURCE_ROOT_PATH}/Foundation )
 
+list( APPEND ${PROJECT_NAME}_TEST_SOURCE_DIRS_VAR ${JMSD_THIS_PROJECT_SOURCE_ROOT}/testsuite/src )
+
 ## include dependencies
 set( ${PROJECT_NAME}_DEPENDENCY_DIRS_VAR
 	${JMSD_PLATFORM_SOURCES}
@@ -106,4 +108,5 @@ target_link_libraries( ${PROJECT_NAME} ${${PROJECT_NAME}_DEPENDENCY_LIBS_VAR} )
 
 ## Expose public includes to other subprojects through cache variable.
 include( ${JMSD_CMAKE_SETTINGS_PATH}/set-expose-dependencies.cmake )
+include( ${JMSD_CMAKE_SETTINGS_PATH}/set-expose-test-source-directories.cmake )
 JMSD_SHOW_PROJECT_FOOTER()
