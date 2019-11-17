@@ -9,6 +9,8 @@ JMSD_SHOW_PROJECT_HEADER()
 include( ${JMSD_COMPONENT_CMAKE_SETTINGS_PATH}/tpc-poco-zip-set-compiler-settings.cmake )
 set( JMSD_THIS_PROJECT_SOURCE_ROOT ${JMSD_COMPONENT_SOURCE_ROOT_PATH}/Zip )
 
+list( APPEND ${PROJECT_NAME}_TEST_SOURCE_DIRS_VAR ${JMSD_THIS_PROJECT_SOURCE_ROOT}/testsuite/src )
+
 
 ## include dependencies
 set( ${PROJECT_NAME}_DEPENDENCY_DIRS_VAR
@@ -58,4 +60,5 @@ target_link_libraries( ${PROJECT_NAME} ${${PROJECT_NAME}_DEPENDENCY_LIBS_VAR} )
 
 ## Expose public includes to other subprojects through cache variable.
 include( ${JMSD_CMAKE_SETTINGS_PATH}/set-expose-dependencies.cmake )
+include( ${JMSD_CMAKE_SETTINGS_PATH}/set-expose-test-source-directories.cmake )
 JMSD_SHOW_PROJECT_FOOTER()
