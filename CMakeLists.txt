@@ -17,7 +17,5 @@ add_subdirectory( tpc_poco_util )
 add_subdirectory( tpc_poco_seven_zip )
 add_subdirectory( tpc_poco_zip )
 
-add_subdirectory( tpc_poco_cppunit )
-
 
 JMSD_SHOW_PROJECT_GROUP_FOOTER()
