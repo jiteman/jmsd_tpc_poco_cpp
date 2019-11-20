@@ -18,7 +18,7 @@ set( ${PROJECT_NAME}_DEPENDENCY_DIRS_VAR
 	${tpc_poco_foundation_DEPENDENCY_DIRS}
 	${JMSD_THIS_PROJECT_SOURCE_ROOT}/include )
 list( REMOVE_DUPLICATES ${PROJECT_NAME}_DEPENDENCY_DIRS_VAR )
-include_directories( ${${PROJECT_NAME}_DEPENDENCY_DIRS_VAR} ${JMSD_THIS_PROJECT_SOURCE_ROOT} )
+include_directories( ${${PROJECT_NAME}_DEPENDENCY_DIRS_VAR} )
 
 
 ## this project headers and sources enumeration section
