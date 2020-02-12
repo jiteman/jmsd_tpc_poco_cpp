@@ -28,6 +28,11 @@ file( GLOB_RECURSE header_and_source_files
 	${JMSD_THIS_PROJECT_SOURCE_ROOT}/src/*.h*
 	${JMSD_THIS_PROJECT_SOURCE_ROOT}/src/*.c* )
 
+set( FILES_TO_REMOVE_HEADER_AND_SOURCE
+	"xmltok_ns.c"
+	"xmltok_impl.c" )
+JMSD_REMOVE_FILES_FROM_THE_LIST( header_and_source_files FILES_TO_REMOVE_HEADER_AND_SOURCE )
+
 add_library( ${PROJECT_NAME} SHARED ${header_and_source_files} )
 
 
