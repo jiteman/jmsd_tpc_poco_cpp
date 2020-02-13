@@ -9,6 +9,7 @@ if ( WIN32 )
 	list( APPEND ${PROJECT_NAME}_C_FLAGS "/wd4131" ) # '': uses old-style declarator
 	list( APPEND ${PROJECT_NAME}_C_FLAGS "/wd4242" ) # '': conversion from '' to '', possible loss of data
 	list( APPEND ${PROJECT_NAME}_C_FLAGS "/wd4244" ) # '': conversion from '' to '', possible loss of data
+	list( APPEND ${PROJECT_NAME}_C_FLAGS "/wd4701" ) # potentially uninitialized local variable '' used
 	list( APPEND ${PROJECT_NAME}_C_FLAGS "/wd4703" ) # potentially uninitialized local pointer variable '' used
 
 	string( REPLACE ";" " " ${PROJECT_NAME}_C_FLAGS_STR "${${PROJECT_NAME}_C_FLAGS}" )
