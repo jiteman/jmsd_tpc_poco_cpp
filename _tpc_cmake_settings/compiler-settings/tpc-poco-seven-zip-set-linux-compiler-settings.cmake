@@ -22,6 +22,7 @@ if ( UNIX )
 	## list( APPEND ${PROJECT_NAME}_CXX_FLAGS "-W" ) #
 	list( APPEND ${PROJECT_NAME}_CXX_FLAGS "-Wno-redundant-decls" ) # redundant redeclaration of '' in same scope
 	list( APPEND ${PROJECT_NAME}_CXX_FLAGS "-Wno-conversion" ) # conversion from '' to '' may change value
+	list( APPEND ${PROJECT_NAME}_CXX_FLAGS "-Wno-inline" ) # inlining failed in call to '' call is unlikely and code size would grow
 
 	string( REPLACE ";" " " ${PROJECT_NAME}_CXX_FLAGS_STR "${${PROJECT_NAME}_CXX_FLAGS}" )
 

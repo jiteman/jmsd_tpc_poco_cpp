@@ -93,14 +93,14 @@ set_target_properties( ${PROJECT_NAME} PROPERTIES SOVERSION 0.1 )
 
 
 ## project target section
-if ( WIN32 )
-	set( ${PROJECT_NAME}_DEPENDENCY_LIBS_VAR
-		"Iphlpapi.lib" )
-elseif( UNIX )
+if( UNIX )
 	set( ${PROJECT_NAME}_DEPENDENCY_LIBS_VAR
 		"pthread"
 		"dl"
 		"rt" )
+elseif ( WIN32 )
+	set( ${PROJECT_NAME}_DEPENDENCY_LIBS_VAR
+		"Iphlpapi.lib" )
 endif()
 
 list( REMOVE_DUPLICATES ${PROJECT_NAME}_DEPENDENCY_LIBS_VAR )
